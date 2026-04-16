@@ -1,0 +1,25 @@
+.timeline-container {
+  padding: 20px;
+}
+
+.timeline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.timeline-card {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.timeline-card h3 {
+  margin: 0;
+}
+
+.timeline-card span {
+  color: gray;
+  font-size: 14px;
+}
