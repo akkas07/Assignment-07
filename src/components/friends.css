@@ -1,0 +1,37 @@
+.friends {
+  padding: 20px;
+}
+
+.friend-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.friend-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  background: #fff;
+}
+
+.friend-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* Status Colors */
+.friend-card.on-track {
+  background: #e0ffe0;
+}
+
+.friend-card.almost-due {
+  background: #fff5cc;
+}
+
+.friend-card.overdue {
+  background: #ffe0e0;
+}
