@@ -1,17 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+// src/App.jsx
+import Navbar from "./components/Navbar";
+import Banner from "./components/Banner";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <>
-     <h1 className='bg'>Hello World</h1>
-    </>
-  )
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Banner />} />
+        <Route path="/timeline" element={<h2>Timeline Page</h2>} />
+        <Route path="/stats" element={<h2>Stats Page</h2>} />
+        <Route path="*" element={<h2>404 Page Not Found</h2>} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
-
-export default App

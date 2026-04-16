@@ -1,0 +1,36 @@
+// src/components/Banner.jsx
+import "./Banner.css";
+import { FaUserPlus } from "react-icons/fa";
+
+export default function Banner() {
+  return (
+    <section className="banner">
+      <div className="banner-text">
+        <h2>Friends to keep close in your life</h2>
+        <p>Your personal area of meaningful connections. Browse, tend, and nurture the relationships that matter most.</p>
+        <button className="add-btn">
+          <FaUserPlus /> Add a Friend
+        </button>
+      </div>
+
+      <div className="summary-cards">
+        <div className="card">
+          <h3>10</h3>
+          <p>Total Friends</p>
+        </div>
+        <div className="card">
+          <h3>3</h3>
+          <p>On Track</p>
+        </div>
+        <div className="card">
+          <h3>6</h3>
+          <p>Need Attention</p>
+        </div>
+        <div className="card">
+          <h3>12</h3>
+          <p>Interactions This Month</p>
+        </div>
+      </div>
+    </section>
+  );
+}
