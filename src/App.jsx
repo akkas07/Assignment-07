@@ -4,6 +4,8 @@ import Friends from "./components/Friends";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import FriendDetails from "./components/FriendDetails";
 import Timeline from "./components/Timeline";
+import Stats from "./components/Stats";
+
 
 
 export default function App() {
@@ -26,6 +28,7 @@ export default function App() {
         <Route path="/stats" element={<h2>Stats Page</h2>} />
         <Route path="/friend/:id" element={<FriendDetails />} />
         <Route path="/timeline" element={<Timeline />} />
+        <Route path="/stats" element={<Stats />} />
 
 
         <Route path="*" element={<h2>404 Page Not Found</h2>} />
