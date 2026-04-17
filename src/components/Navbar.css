@@ -2,69 +2,72 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #222;
-  color: white;
-  padding: 12px 24px;
-  flex-wrap: wrap;
+  padding: 18px 24px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
 }
 
+/* Logo */
 .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
+.logo .keen {
+  font-weight: 700;
+  color: #0a7f42; /* green accent */
+}
+
+/* Navigation links */
 .nav-links {
   display: flex;
+  align-items: center;
   gap: 20px;
-  flex-wrap: wrap;
 }
 
 .nav-links a {
-  color: white;
   text-decoration: none;
-  padding: 6px 10px;
-  border-radius: 4px;
-  transition: background 0.3s ease;
-  white-space: nowrap;
+  color: #333;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: 0.2s ease;
 }
 
-.nav-links a:hover {
-  background: #444;
+/* Home button (green) */
+.nav-btn {
+  background: #0a7f42;
+  color: white !important;
+  font-weight: 500;
 }
 
-.add-btn {
-  background: #4c6ef5 !important;
-  padding: 6px 12px;
-  border-radius: 6px;
+.nav-btn:hover {
+  background: #0c8f4a;
 }
 
+/* Active link */
 .active {
-  background: #ffcc00;
-  color: black !important;
+  background: #e8f5ee;
+  color: #0a7f42 !important;
+  font-weight: 600;
 }
 
-@media (max-width: 768px) {
+/* Icons */
+.icon {
+  font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
   .navbar {
     flex-direction: column;
-    text-align: center;
     gap: 12px;
   }
 
   .nav-links {
-    justify-content: center;
     gap: 12px;
-  }
-}
-
-@media (max-width: 480px) {
-  .nav-links {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .nav-links a {
-    width: 100%;
-    text-align: center;
-    padding: 10px;
   }
 }

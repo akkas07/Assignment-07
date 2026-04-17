@@ -15,14 +15,24 @@ export default function Friends() {
           <Link
             to={`/friend/${f.id}`}
             key={f.id}
-            className={`friend-card ${f.status}`}
+            className="friend-card"
           >
-            <img src={f.picture} alt={f.name} />
+            <div className="friend-header">
+              <img src={f.picture} alt={f.name} className="friend-img" />
+              <span className="days">{f.days_since_contact}d ago</span>
+            </div>
+
             <h3>{f.name}</h3>
-            <p><strong>Email:</strong> {f.email}</p>
-            <p><strong>Days Since Contact:</strong> {f.days_since_contact}</p>
-            <p><strong>Tags:</strong> {f.tags.join(", ")}</p>
-            <p><strong>Status:</strong> {f.status}</p>
+
+            <div className="tags">
+              {f.tags.map((tag, i) => (
+                <span key={i} className="tag">{tag}</span>
+              ))}
+            </div>
+
+            <span className={`status ${f.status}`}>
+              {f.status.replace("-", " ")}
+            </span>
           </Link>
         ))}
       </div>

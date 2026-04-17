@@ -1,65 +1,113 @@
 .friends {
-  padding: 20px;
+  padding: 40px 0;
 }
 
-/* Responsive Grid */
+.friends h2 {
+  font-size: 1.8rem;
+  margin-bottom: 24px;
+  color: #222;
+  text-align: center;
+}
+
+/* GRID */
 .friend-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
 }
 
-/* Friend Card */
+/* CARD */
 .friend-card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 15px;
-  text-align: center;
-  background: #fff;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  padding: 24px;
+  border-radius: 14px;
   text-decoration: none;
   color: inherit;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   transition: 0.2s ease;
+  text-align: center; /* CENTER EVERYTHING */
 }
 
 .friend-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
-/* Avatar */
-.friend-card img {
-  width: 80px;
-  height: 80px;
+/* IMAGE + DAYS CENTER */
+.friend-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.friend-img {
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
-  margin-bottom: 10px;
+  object-fit: cover;
+  border: 2px solid #e5e5e5;
 }
 
-/* Text spacing */
-.friend-card p {
-  margin: 6px 0;
+.days {
+  font-size: 0.85rem;
+  color: #777;
 }
 
-/* Status Colors */
-.friend-card.on-track {
-  background: #e0ffe0;
+/* NAME */
+.friend-card h3 {
+  margin: 14px 0 10px;
+  font-size: 1.2rem;
+  color: #222;
 }
 
-.friend-card.almost-due {
-  background: #fff5cc;
+/* TAGS CENTER */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 14px;
 }
 
-.friend-card.overdue {
-  background: #ffe0e0;
+.tag {
+  background: #eef2ff;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  color: #444;
 }
 
-/* Mobile Tweaks */
-@media (max-width: 480px) {
+/* STATUS BADGE CENTER */
+.status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+/* STATUS COLORS */
+.status.on-track {
+  background: #e8f5ee;
+  color: #0a7f42;
+}
+
+.status.almost-due {
+  background: #fff7d6;
+  color: #b88a00;
+}
+
+.status.overdue {
+  background: #ffe5e5;
+  color: #d12c2c;
+}
+
+/* RESPONSIVE */
+@media (max-width: 500px) {
   .friend-card {
-    padding: 12px;
-  }
-
-  .friend-card img {
-    width: 70px;
-    height: 70px;
+    padding: 18px;
   }
 }
