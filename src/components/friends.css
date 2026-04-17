@@ -2,12 +2,14 @@
   padding: 20px;
 }
 
+/* Responsive Grid */
 .friend-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
 }
 
+/* Friend Card */
 .friend-card {
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -24,6 +26,7 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
+/* Avatar */
 .friend-card img {
   width: 80px;
   height: 80px;
@@ -31,6 +34,7 @@
   margin-bottom: 10px;
 }
 
+/* Text spacing */
 .friend-card p {
   margin: 6px 0;
 }
@@ -46,4 +50,16 @@
 
 .friend-card.overdue {
   background: #ffe0e0;
+}
+
+/* Mobile Tweaks */
+@media (max-width: 480px) {
+  .friend-card {
+    padding: 12px;
+  }
+
+  .friend-card img {
+    width: 70px;
+    height: 70px;
+  }
 }

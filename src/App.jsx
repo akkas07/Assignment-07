@@ -6,6 +6,7 @@ import FriendDetails from "./components/FriendDetails";
 import Timeline from "./components/Timeline";
 import Stats from "./components/Stats";
 import AddFriend from "./components/AddFriend";
+import Footer from "./components/Footer";
 
 import { FriendsProvider } from "./context/FriendsContext";
 import { TimelineProvider } from "./context/TimelineContext";
@@ -35,6 +36,9 @@ export default function App() {
 
             <Route path="*" element={<h2>404 Page Not Found</h2>} />
           </Routes>
+
+          {/* Footer should be OUTSIDE Routes but INSIDE BrowserRouter */}
+          <Footer />
         </BrowserRouter>
       </TimelineProvider>
     </FriendsProvider>
