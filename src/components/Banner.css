@@ -9,8 +9,10 @@
   justify-content: space-between;
   align-items: center;
   gap: 30px;
+  flex-wrap: wrap; /* FIX: allow wrapping on small screens */
 }
 
+/* Text section */
 .banner-text {
   max-width: 50%;
 }
@@ -26,6 +28,7 @@
   line-height: 1.5;
 }
 
+/* Add Friend Button */
 .add-btn {
   background: #ffcc00;
   border: none;
@@ -40,12 +43,14 @@
   color: black;
 }
 
+/* Summary Cards */
 .summary-cards {
   display: grid;
   grid-template-columns: repeat(2, 140px);
   gap: 20px;
 }
 
+/* Individual Card */
 .card {
   background: white;
   border: 1px solid #ddd;
@@ -57,4 +62,33 @@
 .card h3 {
   font-size: 1.6rem;
   margin-bottom: 5px;
+}
+
+/* ----------------------------- */
+/* RESPONSIVE FIXES BELOW       */
+/* ----------------------------- */
+
+@media (max-width: 768px) {
+  .banner {
+    flex-direction: column; /* FIX: stack items vertically */
+    text-align: center;
+  }
+
+  .banner-text {
+    max-width: 100%; /* FIX: full width on mobile */
+  }
+
+  .summary-cards {
+    grid-template-columns: repeat(2, 1fr); /* auto-fit */
+  }
+}
+
+@media (max-width: 480px) {
+  .summary-cards {
+    grid-template-columns: 1fr; /* FIX: 1 column on small phones */
+  }
+
+  .banner-text h2 {
+    font-size: 1.6rem;
+  }
 }
