@@ -1,10 +1,13 @@
 import { useParams } from "react-router-dom";
-import friendsData from "../data/friends.json";
 import "./FriendDetails.css";
+import { useContext } from "react";
+import { FriendsContext } from "../context/FriendsContext";
 
 export default function FriendDetails() {
   const { id } = useParams();
-  const friend = friendsData.find((f) => f.id === Number(id));
+  const { friends } = useContext(FriendsContext);
+
+  const friend = friends.find((f) => f.id === Number(id));
 
   if (!friend) return <h2>Friend Not Found</h2>;
 

@@ -1,14 +1,17 @@
 import "./Friends.css";
-import friendsData from "../data/friends.json";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { FriendsContext } from "../context/FriendsContext";
 
 export default function Friends() {
+  const { friends } = useContext(FriendsContext);
+
   return (
     <section className="friends">
       <h2>Your Friends</h2>
 
       <div className="friend-grid">
-        {friendsData.map((f) => (
+        {friends.map((f) => (
           <Link
             to={`/friend/${f.id}`}
             key={f.id}

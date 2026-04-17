@@ -1,15 +1,16 @@
 import "./Stats.css";
-import friendsData from "../data/friends.json";
 import { useContext } from "react";
+import { FriendsContext } from "../context/FriendsContext";
 import { TimelineContext } from "../context/TimelineContext";
 
 export default function Stats() {
+  const { friends } = useContext(FriendsContext);
   const { timeline } = useContext(TimelineContext);
 
-  const total = friendsData.length;
-  const onTrack = friendsData.filter(f => f.status === "on-track").length;
-  const almostDue = friendsData.filter(f => f.status === "almost-due").length;
-  const overdue = friendsData.filter(f => f.status === "overdue").length;
+  const total = friends.length;
+  const onTrack = friends.filter(f => f.status === "on-track").length;
+  const almostDue = friends.filter(f => f.status === "almost-due").length;
+  const overdue = friends.filter(f => f.status === "overdue").length;
 
   const interactionsThisMonth = timeline.length;
 

@@ -5,34 +5,38 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import FriendDetails from "./components/FriendDetails";
 import Timeline from "./components/Timeline";
 import Stats from "./components/Stats";
+import AddFriend from "./components/AddFriend";
 
-
+import { FriendsProvider } from "./context/FriendsContext";
+import { TimelineProvider } from "./context/TimelineContext";
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <Navbar />
+    <FriendsProvider>
+      <TimelineProvider>
+        <BrowserRouter>
+          <Navbar />
 
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Banner />
-              <Friends />
-            </>
-          }
-        />
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <Banner />
+                  <Friends />
+                </>
+              }
+            />
 
-        <Route path="/timeline" element={<h2>Timeline Page</h2>} />
-        <Route path="/stats" element={<h2>Stats Page</h2>} />
-        <Route path="/friend/:id" element={<FriendDetails />} />
-        <Route path="/timeline" element={<Timeline />} />
-        <Route path="/stats" element={<Stats />} />
+            <Route path="/timeline" element={<Timeline />} />
+            <Route path="/stats" element={<Stats />} />
+            <Route path="/friend/:id" element={<FriendDetails />} />
+            <Route path="/add" element={<AddFriend />} />
 
-
-        <Route path="*" element={<h2>404 Page Not Found</h2>} />
-      </Routes>
-    </BrowserRouter>
+            <Route path="*" element={<h2>404 Page Not Found</h2>} />
+          </Routes>
+        </BrowserRouter>
+      </TimelineProvider>
+    </FriendsProvider>
   );
 }

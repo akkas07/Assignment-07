@@ -12,18 +12,27 @@
 .stat-box {
   background: white;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 12px;
   text-align: center;
-  border: 1px solid #ddd;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: 0.2s ease;
 }
 
+.stat-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+/* PIE CHART */
 .pie-chart {
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
   margin-top: 20px;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 .slice {
@@ -34,17 +43,18 @@
   transform-origin: center;
 }
 
+/* Colors */
 .slice.ontrack {
-  background: #b2f2bb;
+  background: #8ce99a;
   transform: rotate(calc(var(--value) * 3.6deg));
 }
 
 .slice.almostdue {
-  background: #ffe066;
+  background: #ffd43b;
   transform: rotate(calc(var(--value) * 3.6deg));
 }
 
 .slice.overdue {
-  background: #ffa8a8;
+  background: #ff8787;
   transform: rotate(calc(var(--value) * 3.6deg));
 }
