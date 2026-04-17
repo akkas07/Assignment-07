@@ -7,7 +7,7 @@ export default function Banner() {
     <section className="banner">
       <div className="container">
 
-        {/* LEFT SIDE */}
+        {/*  BUTTON */}
         <div className="banner-text">
           <h2>Friends to keep close in your life</h2>
           <p>
@@ -20,7 +20,7 @@ export default function Banner() {
           </Link>
         </div>
 
-        {/* RIGHT SIDE */}
+        {/* SUMMARY CARDS */}
         <div className="summary-cards">
           <div className="card">
             <h3>10</h3>
@@ -28,19 +28,19 @@ export default function Banner() {
           </div>
 
           <div className="card">
-            <h3>3</h3>
-            <p>On Track</p>
+              <h3>3</h3>
+             <p>On Track</p>
           </div>
 
           <div className="card">
             <h3>6</h3>
-            <p>Need Attention</p>
+             <p>Need Attention</p>
           </div>
 
           <div className="card">
-            <h3>12</h3>
+              <h3>12</h3>
             <p>Interactions This Month</p>
-          </div>
+           </div>
         </div>
 
       </div>

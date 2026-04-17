@@ -24,23 +24,23 @@ export default function App() {
               path="/"
               element={
                 <>
-                  <Banner />
-                  <Stats />
-                  <Friends />
+                    <Banner />
+                   <Stats />
+                   <Friends />
                 </>
               }
             />
 
             <Route path="/timeline" element={<Timeline />} />
-            <Route path="/friend/:id" element={<FriendDetails />} />
-            <Route path="/add" element={<AddFriend />} />
-
+               <Route path="/friend/:id" element={<FriendDetails />} />
+              <Route path="/add" element={<AddFriend />} />
+  
             <Route path="*" element={<h2>404 Page Not Found</h2>} />
           </Routes>
 
           <Footer />
-        </BrowserRouter>
-      </TimelineProvider>
+           </BrowserRouter>
+       </TimelineProvider>
     </FriendsProvider>
   );
 }

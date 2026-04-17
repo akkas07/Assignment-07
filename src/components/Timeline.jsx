@@ -10,16 +10,16 @@ export default function Timeline() {
       <h2>Timeline</h2>
 
       <div className="timeline-list">
-        {timeline.length === 0 && <p>No interactions yet.</p>}
+          {timeline.length === 0 && <p>No interactions yet.</p>}
 
         {timeline.map((item) => (
-          <div key={item.id} className="timeline-card">
-            <h3>{item.name}</h3>
-            <p>{item.action}</p>
+            <div key={item.id} className="timeline-card">
+              <h3>{item.name}</h3>
+                <p>{item.action}</p>
             <span>{item.date}</span>
           </div>
         ))}
-      </div>
+       </div>
     </div>
   );
 }

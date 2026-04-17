@@ -20,35 +20,37 @@ export default function Stats() {
 
       <div className="stats-grid">
         <div className="stat-box">
-          <h3>{total}</h3>
-          <p>Total Friends</p>
+            <h3>{total}</h3>
+           <p>Total Friends</p>
         </div>
 
-        <div className="stat-box">
-          <h3>{onTrack}</h3>
+         <div className="stat-box">
+            <h3>{onTrack}</h3>
           <p>On Track</p>
         </div>
 
-        <div className="stat-box">
+
+          <div className="stat-box">
           <h3>{almostDue}</h3>
-          <p>Need Attention</p>
+            <p>Need Attention</p>
         </div>
 
         <div className="stat-box">
-          <h3>{overdue}</h3>
+           <h3>{overdue}</h3>
           <p>Overdue</p>
-        </div>
+          </div>
+
 
         <div className="stat-box">
-          <h3>{interactionsThisMonth}</h3>
-          <p>Interactions This Month</p>
+           <h3>{interactionsThisMonth}</h3>
+             <p>Interactions This Month</p>
         </div>
       </div>
 
       <h3>Status Breakdown</h3>
       <div className="pie-chart">
         <div className="slice ontrack" style={{ "--value": onTrack }}></div>
-        <div className="slice almostdue" style={{ "--value": almostDue }}></div>
+            <div className="slice almostdue" style={{ "--value": almostDue }}></div>
         <div className="slice overdue" style={{ "--value": overdue }}></div>
       </div>
     </div>

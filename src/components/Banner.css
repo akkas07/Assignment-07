@@ -2,23 +2,22 @@
 .banner {
   padding: 60px 0;
   background: #ffffff;
-  min-height: 320px;
 }
 
-/* FIX: CENTER CONTENT INSIDE CONTAINER */
+
+
 .banner .container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 50px;
+  flex-direction: column;
+  align-items: flex-start;   /* FIXED: Left aligned */
+  gap: 32px;
 }
 
-/* LEFT SIDE */
+
 .banner-text {
   max-width: 520px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: 16px;
 }
 
@@ -34,7 +33,7 @@
   line-height: 1.6;
 }
 
-/* ADD FRIEND BUTTON */
+/* ADD BUTTON */
 .add-btn {
   background: #0a7f42;
   color: white;
@@ -53,11 +52,13 @@
   background: #0c8f4a;
 }
 
-/* RIGHT SIDE SUMMARY CARDS */
+
+
 .summary-cards {
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 200px);
-  gap: 22px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 
 .card {
@@ -82,12 +83,7 @@
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
-  .banner .container {
-    flex-direction: column;
-    text-align: center;
-  }
-
   .summary-cards {
-    margin-top: 20px;
+    grid-template-columns: repeat(2, 1fr);
   }
 }

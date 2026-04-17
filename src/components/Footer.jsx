@@ -23,11 +23,11 @@ export default function Footer() {
         <span>© 2026 KeenKeeper. All rights reserved.</span>
 
         <div className="footer-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-          <a href="#">Cookies</a>
-        </div>
-      </div>
+            <a href="#">Privacy Policy</a>
+              <a href="#">Terms of Service</a>
+            <a href="#">Cookies</a>
+         </div>
+          </div>
     </footer>
   );
 }

@@ -27,8 +27,8 @@ export default function AddFriend() {
 
     addFriend(newFriend);
 
-    setName("");
-    setEmail("");
+       setName("");
+       setEmail("");
     setTags("");
 
     alert("Friend added successfully!");
@@ -41,25 +41,25 @@ export default function AddFriend() {
       <form onSubmit={handleSubmit} className="add-form">
         <label>Name</label>
         <input 
-          type="text" 
-          value={name}
-          onChange={(e) => setName(e.target.value)}
+            type="text" 
+             value={name}
+           onChange={(e) => setName(e.target.value)}
           required
         />
 
         <label>Email</label>
         <input 
-          type="email" 
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+            type="email" 
+           value={email}
+             onChange={(e) => setEmail(e.target.value)}
           required
         />
 
         <label>Tags (comma separated)</label>
         <input 
-          type="text" 
+             type="text" 
           value={tags}
-          onChange={(e) => setTags(e.target.value)}
+            onChange={(e) => setTags(e.target.value)}
           required
         />
 

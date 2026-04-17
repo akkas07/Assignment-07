@@ -24,7 +24,7 @@
   box-shadow: 0 6px 16px rgba(0,0,0,0.1);
 }
 
-/* PIE CHART */
+
 .pie-chart {
   width: 220px;
   height: 220px;
@@ -43,7 +43,7 @@
   transform-origin: center;
 }
 
-/* Colors */
+
 .slice.ontrack {
   background: #8ce99a;
   transform: rotate(calc(var(--value) * 3.6deg));

@@ -25,12 +25,14 @@
   }
 }
 
+
 body {
   margin: 0;
   background: var(--bg);
 }
 
-/* FIXED: Removed width:1126px */
+
+
 #root {
   width: 100%;
   max-width: 1200px;
@@ -73,9 +75,11 @@ h2 {
   }
 }
 
+
 p {
   margin: 0;
 }
+
 
 code {
   font-family: ui-monospace, Consolas, monospace;
@@ -83,6 +87,7 @@ code {
   padding: 4px 8px;
   border-radius: 4px;
 }
+
 
 .container {
   width: 100%;

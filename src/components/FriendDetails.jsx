@@ -14,12 +14,14 @@ export default function FriendDetails() {
   return (
     <div className="details-container">
 
-      {/* LEFT SIDE */}
+     
+
       <div className="left-card">
         <img src={friend.picture} alt={friend.name} className="profile-pic" />
 
         <h2>{friend.name}</h2>
         <p className={`status ${friend.status}`}>{friend.status}</p>
+
 
         <div className="tags">
           {friend.tags.map((tag, i) => (
@@ -27,12 +29,13 @@ export default function FriendDetails() {
           ))}
         </div>
 
+
         <p className="bio">{friend.bio}</p>
         <p><strong>Email:</strong> {friend.email}</p>
 
         <div className="actions">
-          <button>⏰ Snooze 2 Weeks</button>
-          <button>📦 Archive</button>
+           <button>⏰ Snooze 2 Weeks</button>
+            <button>📦 Archive</button>
           <button>🗑️ Delete</button>
         </div>
       </div>
@@ -45,10 +48,11 @@ export default function FriendDetails() {
             <h3>{friend.days_since_contact}</h3>
             <p>Days Since Contact</p>
           </div>
+ 
 
           <div className="stat-card">
             <h3>{friend.goal}</h3>
-            <p>Goal (days)</p>
+             <p>Goal (days)</p>
           </div>
 
           <div className="stat-card">
@@ -59,7 +63,7 @@ export default function FriendDetails() {
 
         <div className="goal-card">
           <h3>Relationship Goal</h3>
-          <p>Contact every {friend.goal} days</p>
+           <p>Contact every {friend.goal} days</p>
           <button>Edit</button>
         </div>
 
@@ -67,9 +71,9 @@ export default function FriendDetails() {
           <h3>Quick Check-In</h3>
 
           <div className="checkin-buttons">
-            <button>📞 Call</button>
-            <button>💬 Text</button>
-            <button>🎥 Video</button>
+              <button>📞 Call</button>
+             <button>💬 Text</button>
+               <button>🎥 Video</button>
           </div>
         </div>
 

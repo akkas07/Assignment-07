@@ -7,10 +7,10 @@ import { TimelineProvider } from "./context/TimelineContext";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <FriendsProvider>
-      <TimelineProvider>
+     <FriendsProvider>
+       <TimelineProvider>
         <App />
-      </TimelineProvider>
-    </FriendsProvider>
+       </TimelineProvider>
+      </FriendsProvider>
   </React.StrictMode>
 );

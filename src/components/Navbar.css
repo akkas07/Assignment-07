@@ -1,73 +1,68 @@
 .navbar {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 14px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 24px;
-  background: #ffffff;
-  border-bottom: 1px solid #e5e5e5;
 }
 
-/* Logo */
+
 .logo {
-  font-size: 1.8rem;
-  font-weight: 600;
-}
-
-.logo .keen {
+  font-size: 1.7rem;
   font-weight: 700;
-  color: #0a7f42; /* green accent */
+  margin: 0;
 }
 
-/* Navigation links */
+.keen {
+  color: #0a7f42;
+}
+
+
 .nav-links {
   display: flex;
+  gap: 22px;
   align-items: center;
-  gap: 20px;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: #333;
-  font-size: 1rem;
+.nav-btn {
   display: flex;
   align-items: center;
   gap: 6px;
   padding: 8px 14px;
   border-radius: 8px;
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
   transition: 0.2s ease;
 }
 
-/* Home button (green) */
-.nav-btn {
+.nav-btn:hover {
+  background: #f3f3f3;
+}
+
+.active {
   background: #0a7f42;
   color: white !important;
-  font-weight: 500;
 }
 
-.nav-btn:hover {
-  background: #0c8f4a;
-}
-
-/* Active link */
-.active {
-  background: #e8f5ee;
-  color: #0a7f42 !important;
-  font-weight: 600;
-}
-
-/* Icons */
 .icon {
   font-size: 1.1rem;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-  .navbar {
-    flex-direction: column;
+
+@media (max-width: 768px) {
+  .nav-links {
     gap: 12px;
   }
 
-  .nav-links {
-    gap: 12px;
+  .nav-btn {
+    padding: 6px 10px;
   }
 }

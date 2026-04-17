@@ -34,13 +34,14 @@
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
-/* IMAGE + DAYS CENTER */
+
 .friend-header {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 6px;
 }
+
 
 .friend-img {
   width: 70px;
@@ -55,14 +56,14 @@
   color: #777;
 }
 
-/* NAME */
+
 .friend-card h3 {
   margin: 14px 0 10px;
   font-size: 1.2rem;
   color: #222;
 }
 
-/* TAGS CENTER */
+
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -79,7 +80,7 @@
   color: #444;
 }
 
-/* STATUS BADGE CENTER */
+
 .status {
   padding: 6px 12px;
   border-radius: 20px;
@@ -89,7 +90,7 @@
   margin: 0 auto;
 }
 
-/* STATUS COLORS */
+
 .status.on-track {
   background: #e8f5ee;
   color: #0a7f42;
@@ -105,7 +106,7 @@
   color: #d12c2c;
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 500px) {
   .friend-card {
     padding: 18px;

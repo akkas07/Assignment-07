@@ -18,7 +18,7 @@ export default function Friends() {
             className="friend-card"
           >
             <div className="friend-header">
-              <img src={f.picture} alt={f.name} className="friend-img" />
+               <img src={f.picture} alt={f.name} className="friend-img" />
               <span className="days">{f.days_since_contact}d ago</span>
             </div>
 
@@ -26,7 +26,7 @@ export default function Friends() {
 
             <div className="tags">
               {f.tags.map((tag, i) => (
-                <span key={i} className="tag">{tag}</span>
+                 <span key={i} className="tag">{tag}</span>
               ))}
             </div>
 
